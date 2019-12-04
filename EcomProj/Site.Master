@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="EcomProj.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>World Library</title>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header style="text-align: center; 
+            background-color: lightyellow;border-style:solid;color:black" class="auto-style2">
+            <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/book.png" 
+                Width="112px" CssClass="auto-style1" Height="69px" ImageAlign="Left"/>
+            <h1 class="auto-style4">World Library</h1>
+        </header>
+ 
+            <nav style="background-color:paleturquoise;border-style:solid;padding:10px;color:black;" class="auto-style3">
+            <a class="navTab" href="Home.aspx"> Home </a>&emsp;|&emsp;
+            <a class="navTab" href="CreateAccount.aspx"> Create an Account </a>&emsp;|&emsp;
+            <a class="navTab" href="LogIn.aspx"> Log In </a>&emsp;|&emsp;
+            <a class="navTab" href="ProductDetails.aspx">Product Details</a>&emsp;|&emsp;
+            <asp:ImageButton ID="ShopCart" runat="server" Height="24px" ImageUrl="~/Images/AddToCart.png" Width="35px" PostBackUrl="~/ShopCart.aspx"/>
+
+            </nav>
+        <section style="background-color: lightyellow;" class="auto-style5">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+              
+            </asp:ContentPlaceHolder>
+        </section>
+</form>
+    <footer style="background-color:paleturquoise;
+color:black;border-style:solid;border-color:black;">This Website is owned by its creators</footer>
+</body>
+</html>
